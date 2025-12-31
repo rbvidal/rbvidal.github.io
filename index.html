@@ -5,64 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandao Vidal IT Solutions</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
-        header { background: #2c3e50; color: white; padding: 2rem; text-align: center; }
-        nav { background: #34495e; padding: 0.5rem; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        .container { max-width: 900px; margin: auto; padding: 20px; }
-        .hero { background: #f4f4f4; padding: 40px; border-radius: 8px; text-align: center; margin-bottom: 20px; }
-        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .service-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #fff; }
-        footer { text-align: center; padding: 20px; background: #2c3e50; color: white; margin-top: 40px; }
-        img.main-logo { max-width: 200px; margin-bottom: 20px; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f4f7f6; }
+        header { 
+            background: #2c3e50; 
+            color: white; 
+            padding: 80px 20px; 
+            text-align: center;
+            /* Background from your list: startup_bergen.jpg */
+            background-image: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('assets/startup_bergen.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        nav { background: #1a252f; padding: 1rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: #ecf0f1; margin: 0 20px; text-decoration: none; font-weight: 500; text-transform: uppercase; font-size: 0.85rem; }
+        .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+        .logo { max-width: 100px; margin-bottom: 20px; filter: brightness(0) invert(1); }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .service-card { border: none; padding: 35px; border-radius: 10px; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        footer { text-align: center; padding: 50px; background: #1a252f; color: #bdc3c7; margin-top: 60px; }
+        .tech-tag { display: inline-block; background: #e8f4fd; color: #2980b9; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; margin: 4px; font-weight: bold; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Brandao Vidal IT Solutions</h1>
-    <p>Professional IT Services & Architecture</p>
-</header>
-
 <nav>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#services">Expertise</a>
+    <a href="#about">Profile</a>
 </nav>
 
-<div class="container">
-    <section class="hero">
-        <img src="assets/images/CMS.png" alt="IT Solutions" class="main-logo" onerror="this.style.display='none'">
-        <h2>Tailored IT Solutions for your Business</h2>
-        <p>Specializing in Industry, Startups, and Research institutions across Germany, Norway, and Switzerland.</p>
-    </section>
+<header id="home">
+    <img src="assets/fraz3.png" alt="Logo" class="logo" onerror="this.style.display='none'">
+    <h1>Brandao Vidal IT Solutions</h1>
+    <p>Architecture, Integration & Intelligent Systems</p>
+</header>
 
+<div class="container">
     <section id="services">
-        <h2>Our Expertise</h2>
         <div class="service-grid">
             <div class="service-card">
-                <h3>CMS & Portals</h3>
-                <p>Expert integration and development for content management systems and enterprise portals.</p>
+                <h3>Systems Architecture</h3>
+                <p>Designing scalable microservices for complex business challenges.</p>
             </div>
             <div class="service-card">
-                <h3>Integration Services</h3>
-                <p>Connecting complex systems to ensure seamless business workflows.</p>
+                <h3>Deep Learning</h3>
+                <p>Specialized expertise in <strong>Machine Learning</strong> and <strong>DL4J</strong>.</p>
             </div>
             <div class="service-card">
-                <h3>IT Architecture</h3>
-                <p>Designing robust and scalable architectures for modern technological needs.</p>
+                <h3>Integration</h3>
+                <p>End-to-end integration of CMS and custom backend systems.</p>
             </div>
         </div>
     </section>
 
-    <section id="about" style="margin-top: 40px;">
-        <h2>About Brandao Vidal</h2>
-        <p>We provide high-level programming and IT consultancy, with a strong background in Java, Spring Boot, and Microservices. Our experience spans from working with major Industry clients to agile Startups.</p>
+    <section id="about" style="background:white; padding:40px; border-radius:10px; margin-top:40px;">
+        <h2>About the Firm</h2>
+        <p>Providing high-level software engineering for clients across Germany, Switzerland, and Norway.</p>
+        <div>
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">PostGIS</span>
+            <span class="tech-tag">Docker</span>
+        </div>
     </section>
 </div>
 
 <footer>
-    <p>&copy; 2024 Brandao Vidal IT Solutions | Powered by GitHub Pages</p>
+    <p>&copy; 2024 Brandao Vidal IT Solutions</p>
 </footer>
 
 </body>
