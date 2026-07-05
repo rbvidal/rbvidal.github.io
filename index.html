@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ralph Brandão Vidal — Software Engineering for Knowledge Systems</title>
+<meta name="description" content="Software engineer in Berlin. Building systems that help organizations organize, retrieve and operationalize knowledge through semantic search, knowledge graphs and modern information systems.">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="canonical" href="https://rbvidal.github.io/">
+<meta property="og:title" content="Ralph Brandão Vidal — Software Engineering for Knowledge Systems">
+<meta property="og:description" content="Building systems that help organizations organize, retrieve and operationalize knowledge.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rbvidal.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ralph Brandão Vidal — Software Engineering for Knowledge Systems">
+<meta name="twitter:description" content="Building systems for semantic search, knowledge graphs and modern information systems.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Ralph Brandão Vidal","description":"Software engineer in Berlin. Building systems that help organizations organize, retrieve and operationalize knowledge through semantic search, knowledge graphs and modern information systems.","address":{"@type":"PostalAddress","addressLocality":"Berlin","addressCountry":"DE"},"url":"https://rbvidal.github.io"}
+</script>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Home">Ralph Vidal</a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#notes">Notes</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ═══════════ Hero ═══════════ -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Berlin, Germany</p>
+    <h1 id="hero-heading">Software Engineering<br><span class="accent">for Knowledge Systems</span></h1>
+    <p class="lead">Building software that helps organizations organize, retrieve and operationalize knowledge through semantic search, knowledge graphs, workflow automation and modern information systems.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ Knowledge Systems ═══════════ -->
+<section id="knowledge" class="bg-mid" aria-labelledby="knowledge-heading">
+  <div class="wrap">
+    <div class="section-header reveal">
+      <p class="eyebrow">Knowledge Systems</p>
+      <h2 id="knowledge-heading">Software can do more than automate tasks.</h2>
+      <p class="lead">It can preserve, organize and operationalize knowledge. My work focuses on building systems that help organizations retrieve information, connect knowledge and support decision making.</p>
+    </div>
+    <div class="cap-grid">
+
+      <div class="cap-card reveal">
+        <h3>Information Retrieval</h3>
+        <p>Finding relevant information across large, heterogeneous document collections. Hybrid search combining lexical matching with semantic understanding. Vector search, BM25, reranking, and query-time filtering.</p>
+      </div>
+
+      <div class="cap-card reveal reveal-delay-1">
+        <h3>Knowledge Representation</h3>
+        <p>Structuring information so that entities, relationships and context become explicit and queryable. Knowledge graphs, entity resolution, metadata extraction and graph-based reasoning.</p>
+      </div>
+
+      <div class="cap-card reveal reveal-delay-2">
+        <h3>Document Intelligence</h3>
+        <p>Extracting structure and meaning from documents at scale. Parsing, classification, chunking strategies and embedding pipelines that prepare content for retrieval and reasoning.</p>
+      </div>
+
+      <div class="cap-card reveal reveal-delay-3">
+        <h3>Software Infrastructure</h3>
+        <p>Building systems that keep sensitive information under organizational control. Local language model deployment, on-premise infrastructure, API design and system architecture.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ Flagship Project ═══════════ -->
+<section id="projects" aria-labelledby="proj-heading">
+  <div class="wrap">
+    <div class="section-header reveal">
+      <p class="eyebrow">Flagship Project</p>
+      <h2 id="proj-heading">Enterprise AI Platform.</h2>
+    </div>
+
+    <div class="project-cards">
+
+      <article class="project-card reveal">
+        <div class="text">
+          <div class="meta"><span>Java &middot; Spring Boot &middot; Neo4j &middot; OpenSearch &middot; Ollama &middot; RAG</span></div>
+          <h3>Enterprise AI Platform</h3>
+          <p>A modular software platform for building knowledge-driven applications that combine semantic retrieval, document intelligence, knowledge graphs, workflow automation and local language models. The project demonstrates a reusable architecture rather than a single application.</p>
+          <div class="tags">
+            <span>Java</span><span>Spring Boot</span><span>Neo4j</span><span>OpenSearch</span><span>Ollama</span><span>LLMs</span><span>RAG</span><span>Vector Search</span>
+          </div>
+          <a href="https://github.com/rbvidal/enterprise-ai-platform" class="card-link" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+        </div>
+        <div class="visual"><img src="assets/img/projects/doc_platform.png" alt="" loading="lazy"></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ Architecture ═══════════ -->
+<section id="architecture" class="bg-mid" aria-labelledby="arch-heading">
+  <div class="wrap">
+    <div class="section-header reveal">
+      <p class="eyebrow">Architecture</p>
+      <h2 id="arch-heading">How knowledge moves through a system.</h2>
+      <p class="lead">Patterns for designing retrieval and intelligence infrastructure — from raw documents through structured knowledge to reasoned answers.</p>
+    </div>
+
+    <div class="diagram reveal" aria-label="Semantic Retrieval Pipeline" role="img">
+      <h3 style="margin-bottom:24px;font-size:1.05rem">Semantic Retrieval Pipeline</h3>
+      <svg viewBox="0 0 960 260" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#3b82f6"/></marker>
+          <marker id="arrow-down" viewBox="0 0 10 10" refX="5" refY="8" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L5,10 L10,0 Z" fill="#3b82f6"/></marker>
+        </defs>
+
+        <!-- Row 1: Documents → Parsing → Chunking → Embeddings -->
+        <rect x="20" y="25" width="95" height="56" rx="10" fill="var(--bg3)" stroke="var(--border-light)"/>
+        <text x="67" y="58" text-anchor="middle" font-size="13" fill="#fafafa">Documents</text>
+
+        <line x1="118" y1="53" x2="148" y2="53" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <rect x="153" y="25" width="80" height="56" rx="10" fill="var(--bg3)" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="193" y="58" text-anchor="middle" font-size="13" fill="#fafafa">Parsing</text>
+
+        <line x1="236" y1="53" x2="266" y2="53" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <rect x="271" y="25" width="90" height="56" rx="10" fill="var(--bg3)" stroke="var(--border-light)"/>
+        <text x="316" y="58" text-anchor="middle" font-size="13" fill="#fafafa">Chunking</text>
+
+        <line x1="364" y1="53" x2="394" y2="53" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <rect x="399" y="25" width="100" height="56" rx="10" fill="var(--bg3)" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="449" y="58" text-anchor="middle" font-size="13" fill="#fafafa">Embeddings</text>
+
+        <!-- Connector: Embeddings ↓ to Vector Search -->
+        <line x1="449" y1="81" x2="449" y2="115" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow-down)"/>
+        <line x1="449" y1="115" x2="65" y2="115" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="6,4"/>
+        <line x1="65" y1="115" x2="65" y2="135" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow-down)"/>
+
+        <!-- Row 2: Vector Search → Knowledge Graph (Neo4j) → Hybrid Retrieval → LLM → Answer -->
+        <rect x="20" y="140" width="105" height="56" rx="10" fill="var(--bg3)" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="72" y="168" text-anchor="middle" font-size="12" fill="#fafafa">Vector Search</text>
+
+        <line x1="128" y1="168" x2="158" y2="168" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <rect x="163" y="135" width="140" height="66" rx="10" fill="var(--accent-dim)" stroke="var(--accent)" stroke-width="2"/>
+        <text x="233" y="162" text-anchor="middle" font-size="12" fill="#fafafa">Knowledge Graph</text>
+        <text x="233" y="182" text-anchor="middle" font-size="10" fill="var(--muted)">Neo4j</text>
+
+        <line x1="306" y1="168" x2="336" y2="168" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <rect x="341" y="140" width="125" height="56" rx="10" fill="var(--bg3)" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="403" y="168" text-anchor="middle" font-size="12" fill="#fafafa">Hybrid Retrieval</text>
+
+        <line x1="469" y1="168" x2="499" y2="168" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <rect x="504" y="145" width="70" height="46" rx="10" fill="var(--accent-dim)" stroke="var(--accent)"/>
+        <text x="539" y="173" text-anchor="middle" font-size="13" fill="#3b82f6" font-weight="600">LLM</text>
+
+        <line x1="577" y1="168" x2="607" y2="168" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <rect x="612" y="145" width="80" height="46" rx="10" fill="var(--bg3)" stroke="var(--accent)" stroke-width="2"/>
+        <text x="652" y="173" text-anchor="middle" font-size="13" fill="#fafafa" font-weight="600">Answer</text>
+      </svg>
+    </div>
+
+    <div class="diagram reveal reveal-delay-1" aria-label="Document Processing Workflow" role="img">
+      <h3 style="margin-bottom:24px;font-size:1.05rem">Document Processing Workflow</h3>
+      <svg viewBox="0 0 960 250" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#3b82f6"/></marker>
+          <marker id="arrow-down2" viewBox="0 0 10 10" refX="5" refY="8" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L5,10 L10,0 Z" fill="#3b82f6"/></marker>
+          <marker id="arrow-up2" viewBox="0 0 10 10" refX="5" refY="2" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,10 L5,0 L10,10 Z" fill="#3b82f6"/></marker>
+        </defs>
+
+        <!-- Row 1: Documents → Parsing → Metadata Extraction → Chunking → Embeddings -->
+        <rect x="15" y="25" width="90" height="56" rx="10" fill="var(--bg3)" stroke="var(--border-light)"/>
+        <text x="60" y="58" text-anchor="middle" font-size="13" fill="#fafafa">Documents</text>
+
+        <line x1="108" y1="53" x2="138" y2="53" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow2)"/>
+
+        <rect x="143" y="25" width="78" height="56" rx="10" fill="var(--bg3)" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="182" y="58" text-anchor="middle" font-size="13" fill="#fafafa">Parsing</text>
+
+        <line x1="224" y1="53" x2="254" y2="53" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow2)"/>
+
+        <rect x="259" y="22" width="98" height="62" rx="10" fill="var(--bg3)" stroke="var(--border-light)"/>
+        <text x="308" y="50" text-anchor="middle" font-size="11" fill="#fafafa">Metadata</text>
+        <text x="308" y="68" text-anchor="middle" font-size="11" fill="#fafafa">Extraction</text>
+
+        <line x1="360" y1="53" x2="390" y2="53" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow2)"/>
+
+        <rect x="395" y="25" width="85" height="56" rx="10" fill="var(--bg3)" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="437" y="58" text-anchor="middle" font-size="13" fill="#fafafa">Chunking</text>
+
+        <line x1="483" y1="53" x2="513" y2="53" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow2)"/>
+
+        <rect x="518" y="25" width="95" height="56" rx="10" fill="var(--bg3)" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="565" y="58" text-anchor="middle" font-size="13" fill="#fafafa">Embeddings</text>
+
+        <!-- Connector: Embeddings ↓ to Knowledge Graph and Search Index -->
+        <line x1="565" y1="81" x2="565" y2="115" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow-down2)"/>
+
+        <line x1="565" y1="115" x2="50" y2="115" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="6,4"/>
+        <line x1="50" y1="115" x2="50" y2="135" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow-down2)"/>
+
+        <!-- Row 2: Knowledge Graph → Search Index → Retrieval → AI Assistant -->
+        <rect x="15" y="140" width="125" height="56" rx="10" fill="var(--accent-dim)" stroke="var(--accent)" stroke-width="2"/>
+        <text x="77" y="173" text-anchor="middle" font-size="12" fill="#fafafa">Knowledge Graph</text>
+
+        <line x1="143" y1="168" x2="173" y2="168" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow2)"/>
+
+        <rect x="178" y="140" width="105" height="56" rx="10" fill="var(--bg3)" stroke="var(--border-light)"/>
+        <text x="230" y="173" text-anchor="middle" font-size="12" fill="#fafafa">Search Index</text>
+
+        <line x1="286" y1="168" x2="316" y2="168" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow2)"/>
+
+        <rect x="321" y="140" width="90" height="56" rx="10" fill="var(--bg3)" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="366" y="173" text-anchor="middle" font-size="13" fill="#fafafa">Retrieval</text>
+
+        <line x1="414" y1="168" x2="444" y2="168" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow2)"/>
+
+        <rect x="449" y="135" width="130" height="66" rx="10" fill="var(--accent-dim)" stroke="var(--accent)" stroke-width="2"/>
+        <text x="514" y="162" text-anchor="middle" font-size="13" fill="#fafafa" font-weight="600">AI Assistant</text>
+        <text x="514" y="182" text-anchor="middle" font-size="10" fill="var(--muted)">answer generation</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ Engineering Notes ═══════════ -->
+<section id="notes" aria-labelledby="notes-heading">
+  <div class="wrap">
+    <div class="section-header reveal">
+      <p class="eyebrow">Engineering Notes</p>
+      <h2 id="notes-heading">Technical essays.</h2>
+      <p class="lead">Notes on problems, architectures, trade-offs and engineering decisions — not customer success stories.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card reveal">
+        <div class="num">01</div>
+        <h3>Enterprise Search Architecture</h3>
+        <p>Designing federated search across heterogeneous document repositories. Connector-based ingestion, access control mapping, and query-time permission filtering with OpenSearch.</p>
+        <a href="projects/enterprise-search.html" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:500;font-size:0.88rem">Read more &rarr;</a>
+      </article>
+
+      <article class="service-card reveal reveal-delay-1">
+        <div class="num">02</div>
+        <h3>Geospatial Search with PostGIS</h3>
+        <p>Proximity-based search using PostGIS spatial extensions with Spring Boot and Hibernate Spatial. Coordinate reference systems, spatial queries and the unit conversion problem.</p>
+        <a href="projects/semantic-platform.html" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:500;font-size:0.88rem">Read more &rarr;</a>
+      </article>
+
+      <article class="service-card reveal reveal-delay-2">
+        <div class="num">03</div>
+        <h3>Satellite Image Classification</h3>
+        <p>Transfer learning with DL4J and a pre-trained VGG16 model for classifying satellite imagery. When to reuse pre-trained features versus training from scratch.</p>
+        <a href="projects/workflow-ai.html" style="display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:500;font-size:0.88rem">Read more &rarr;</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ Professional Experience ═══════════ -->
+<section id="experience" class="bg-mid" aria-labelledby="exp-heading">
+  <div class="wrap">
+    <div class="section-header reveal">
+      <p class="eyebrow">Professional Experience</p>
+      <h2 id="exp-heading">Over twenty years of software engineering.</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2022–2023</div>
+        <div class="timeline-content">
+          <h3>T-Systems International</h3>
+          <p class="timeline-context">Frankfurt am Main (remote)</p>
+          <p>Wrote software for Operations Control Centers used by German police, fire departments and emergency services — real-time, fail-safe systems.</p>
+          <p class="timeline-stack">Java 17, Kafka, SOAP, REST, Vert.x, WebSockets, Maven, Liquibase</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2021–2022</div>
+        <div class="timeline-content">
+          <h3>Inverso GmbH</h3>
+          <p class="timeline-context">Munich (remote)</p>
+          <p>Subsidiary of VKB (Versicherungskammer Bayern), developing application solutions for insurance companies. Developed software components in a Kafka pipeline and Spring Boot-based services.</p>
+          <p class="timeline-stack">Gradle, Kafka, Spring Boot, JUnit, Java 11</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2021</div>
+        <div class="timeline-content">
+          <h3>Dønvold Detour ENK</h3>
+          <p class="timeline-context">Norway</p>
+          <p>Built the architecture and implementation of a Spring Boot backend with user management, secure login, OpenAPI v3.0 compliant REST endpoints, Postgres database and Docker deployment.</p>
+          <p class="timeline-stack">Docker, Maven, Spring Boot, JUnit, Mockito, Postgres, OpenAPI, REST, Java 8, Lombok</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2019</div>
+        <div class="timeline-content">
+          <h3>Ingrano Solutions GmbH</h3>
+          <p class="timeline-context">Berlin</p>
+          <p>Developed automated tests for router software as part of the digitalization of the German healthcare system (telematics infrastructure).</p>
+          <p class="timeline-stack">Docker, Maven, Spring Boot, Cucumber, JUnit, Java 8</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2013–2019</div>
+        <div class="timeline-content">
+          <h3>Private Client</h3>
+          <p class="timeline-context">Switzerland</p>
+          <p>Long-term project for time-series prediction using classification, regression and deep learning. Built applications with over 100 data mining algorithms from the WEKA library and deep learning algorithms from DL4J — neural nets, convolutional nets, transfer learning and LSTM networks. Later rewrote the application as microservices with a Thymeleaf frontend and Spring Boot backend, adding an AlphaGoZero-based service adapted with Kafka and WebSockets.</p>
+          <p class="timeline-stack">Java 8, Maven, WEKA, DL4J, Docker, Spring Boot, Zuul, Cassandra, Scala, Kafka</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2017</div>
+        <div class="timeline-content">
+          <h3>German Aerospace Centre (DLR)</h3>
+          <p class="timeline-context">Berlin</p>
+          <p>Mandatory university internship at the DLR Institute of Planetary Research. Processed seismic data from the ROBEX lunar rover prototype, part of the Helmholtz-Robex Alliance.</p>
+          <p class="timeline-stack">Java 8, Python</p>
+          <div class="timeline-img"><img src="assets/img/research/DLR1.jpg" alt="DLR German Aerospace Centre" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2015–2016</div>
+        <div class="timeline-content">
+          <h3>Bonify</h3>
+          <p class="timeline-context">Berlin</p>
+          <p>Credit report startup. Developed microservices for the backend in a small team.</p>
+          <p class="timeline-stack">Java 8, Maven, Postgres, JavaMail, SOAP, Flyway, Mockito, JUnit, Spring Boot</p>
+          <div class="timeline-img"><img src="assets/img/enterprise/bonify1.png" alt="" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2013–2019</div>
+        <div class="timeline-content">
+          <h3>Startup Weekend Participation</h3>
+          <p class="timeline-context">Berlin, Oslo, Bergen, Zurich, Prague, St. Gallen</p>
+          <p>Regular participation in startup weekends and innovation events across Europe. Built prototypes, collaborated with diverse teams and explored early-stage product ideas.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2012–2013</div>
+        <div class="timeline-content">
+          <h3>Fraunhofer FOKUS</h3>
+          <p class="timeline-context">Berlin</p>
+          <p>Fraunhofer Institute for Open Communication Systems. Worked on the Fix-My-City and Adhocracy portals — installed and maintained LiquidFeedback and Adhocracy, integrated LiquidFeedback with CKAN, and connected FixMyCity with LiquidFeedback using Spring Boot.</p>
+          <p class="timeline-stack">Java 8, Maven, Spring MVC, JUnit, Hibernate, Postgres, Lua Server Pages</p>
+          <div class="timeline-img"><img src="assets/img/research/FOKUS_Geb-ude_970x485.jpg" alt="Fraunhofer FOKUS" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2009–2011</div>
+        <div class="timeline-content">
+          <h3>Max-Planck-Institut für Bildungsforschung</h3>
+          <p class="timeline-context">Berlin</p>
+          <p>Worked on the EU-funded LarKC (Large Knowledge Collider) project — a platform for massively distributed incomplete reasoning. Implemented data mining applications using clustering and latent semantic analysis, and worked with Semantic Web technologies.</p>
+          <p class="timeline-stack">Maven, Spring MVC, LingPipe, Hibernate, Postgres, OpenNLP, SemanticVectors, Sesame, R</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2009</div>
+        <div class="timeline-content">
+          <h3>DFKI</h3>
+          <p class="timeline-context">Berlin</p>
+          <p>German Research Center for Artificial Intelligence. Worked on a Sentiment Analyzer project — implemented software for clustering, classification and social media mining.</p>
+          <p class="timeline-stack">Java, WEKA, LingPipe</p>
+          <div class="timeline-img"><img src="assets/img/research/DFKI-Berlin_Gebaeude_V2.jpg" alt="DFKI Berlin" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2008</div>
+        <div class="timeline-content">
+          <h3>CMS, Humboldt University of Berlin</h3>
+          <p class="timeline-context">Berlin</p>
+          <p>Integrated the Alfresco content management system with the Liferay portal for students at Humboldt University (at the time over 15,000 students), for the Computer and Media Service Department.</p>
+          <p class="timeline-stack">Java, CAS, LDAP, Alfresco, Liferay</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2007</div>
+        <div class="timeline-content">
+          <h3>Nokia Siemens Networks</h3>
+          <p class="timeline-context">Berlin</p>
+          <p>Joint venture between Nokia Oyj and Siemens AG. Developed modules for the internal Nokia-Siemens portal.</p>
+          <p class="timeline-stack">Java, JSP, Spring Framework, Hibernate, JPA, Oracle</p>
+          <div class="timeline-img"><img src="assets/img/enterprise/nsn_sml_rgb.jpg" alt="Nokia Siemens Networks" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2005–2007</div>
+        <div class="timeline-content">
+          <h3>Siemens Networks</h3>
+          <p class="timeline-context">Berlin</p>
+          <p>Communications and information business of Siemens AG. Developed modules for the internal Siemens portal used by Siemens managers worldwide to manage their projects.</p>
+          <p class="timeline-stack">Java, JSP, Spring Framework, Hibernate, JPA, Oracle</p>
+          <div class="timeline-img"><img src="assets/img/enterprise/Simens.jpg" alt="Siemens" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2005</div>
+        <div class="timeline-content">
+          <h3>European Patent Office</h3>
+          <p class="timeline-context">Berlin</p>
+          <p>Analyzed patent documents in the field of Natural Language Processing and defined proposed new classification categories. Each document was read and understood within 12 minutes as part of the reclassification effort.</p>
+          <p class="timeline-stack">EPO internal portal, US Patent Office portal, Japanese Patent Office portal</p>
+          <div class="timeline-img"><img src="assets/img/research/EPO_BERLIN.jpg" alt="European Patent Office Berlin" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2002–2004</div>
+        <div class="timeline-content">
+          <h3>Computer Center, Humboldt University of Berlin</h3>
+          <p class="timeline-context">Berlin</p>
+          <p>Developed a JSP-based application for the media center at Humboldt University.</p>
+          <p class="timeline-stack">Servlets, JSP, Hibernate, JPA, Tomcat, Postgres</p>
+          <div class="timeline-img"><img src="assets/img/research/HU_GRIM2-800x590.jpg" alt="Humboldt University" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2001–2002</div>
+        <div class="timeline-content">
+          <h3>Tonxx GmbH</h3>
+          <p class="timeline-context">Berlin</p>
+          <p>Developed a spam-detection plugin for Microsoft Outlook based on a patent application. Responsible for GUI design and implementation of the Outlook plugin.</p>
+          <p class="timeline-stack">.NET (C#)</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-year">2000–2001</div>
+        <div class="timeline-content">
+          <h3>Semantic Edge</h3>
+          <p class="timeline-context">Berlin</p>
+          <p>Developed natural language dialog systems. Worked on Java development, data mining modules and GUI programming.</p>
+          <p class="timeline-stack">Java, Perl</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ About ═══════════ -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="wrap">
+    <div class="about-layout reveal">
+      <div class="about-text">
+        <p class="eyebrow">About</p>
+        <h2 id="about-heading">Ralph Brandão Vidal</h2>
+        <p class="location">Berlin, Germany</p>
+        <p>Over twenty years of software engineering, with work spanning natural language processing, information retrieval, knowledge representation, enterprise software and machine learning.</p>
+        <p>My focus is building systems that help organizations preserve, organize and operationalize knowledge. This has led from early work in content management and enterprise portals through semantic search and knowledge graphs to the integration of local language models into knowledge systems. Artificial Intelligence is one component of these systems — not the purpose of the systems themselves.</p>
+        <p>Advanced studies (Hauptstudium) in Computer Science at Humboldt University of Berlin. M.Sc. in Geological Sciences (Geophysics), Freie Universität Berlin. Native Portuguese speaker. Fluent in German and English.</p>
+        <p style="margin-top:24px">
+          <span style="display:inline-block;padding:6px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;font-size:0.82rem;color:var(--text2);margin:3px">Java</span>
+          <span style="display:inline-block;padding:6px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;font-size:0.82rem;color:var(--text2);margin:3px">Spring Boot</span>
+          <span style="display:inline-block;padding:6px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;font-size:0.82rem;color:var(--text2);margin:3px">Neo4j</span>
+          <span style="display:inline-block;padding:6px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;font-size:0.82rem;color:var(--text2);margin:3px">OpenSearch</span>
+          <span style="display:inline-block;padding:6px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;font-size:0.82rem;color:var(--text2);margin:3px">PostgreSQL</span>
+          <span style="display:inline-block;padding:6px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;font-size:0.82rem;color:var(--text2);margin:3px">Docker</span>
+          <span style="display:inline-block;padding:6px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;font-size:0.82rem;color:var(--text2);margin:3px">REST APIs</span>
+          <span style="display:inline-block;padding:6px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;font-size:0.82rem;color:var(--text2);margin:3px">LLMs</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ Contact ═══════════ -->
+<section id="contact" class="bg-mid" aria-labelledby="contact-heading">
+  <div class="wrap">
+    <div class="section-header reveal">
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-heading">Get in touch.</h2>
+    </div>
+    <div class="contact-grid reveal">
+      <a href="https://github.com/rbvidal" class="contact-link" target="_blank" rel="noopener">
+        <div class="label">GitHub</div>
+        <div>github.com/rbvidal</div>
+      </a>
+      <a href="https://www.linkedin.com/in/ralphbrandaovidal/" class="contact-link" target="_blank" rel="noopener">
+        <div class="label">LinkedIn</div>
+        <div>linkedin.com/in/rbvidal</div>
+      </a>
+      <a href="https://gitlab.com/rb2000" class="contact-link" target="_blank" rel="noopener">
+        <div class="label">GitLab</div>
+        <div>gitlab.com/rb2000</div>
+      </a>
+      <a href="tel:+4915730206486" class="contact-link">
+        <div class="label">Phone</div>
+        <div>+49 1573 020 6486</div>
+      </a>
+      <a href="mailto:brandao.vidal@gmail.com" class="contact-link">
+        <div class="label">Email</div>
+        <div>brandao.vidal@gmail.com</div>
+      </a>
+      <div class="contact-link">
+        <div class="label">Location</div>
+        <div>Berlin, Germany</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Ralph Brandão Vidal &mdash; Berlin</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

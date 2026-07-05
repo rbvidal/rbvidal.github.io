@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rbvidal.github.io/sitemap.xml

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Enterprise Search Architecture — Ralph Brandao Vidal</title>
+<meta name="description" content="Designing federated search across heterogeneous document repositories.">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head><body>
+
+<nav aria-label="Main navigation"><div class="wrap">
+  <a href="../" class="logo">Ralph Vidal</a>
+  <div class="nav-links"><a href="../index.html#notes">&larr; Engineering Notes</a></div>
+</div></nav>
+
+<main style="padding-top:120px"><div class="wrap">
+<article style="max-width:780px;margin:0 auto">
+
+<p class="eyebrow">Engineering Notes</p>
+<h1 style="margin-bottom:.5em">Enterprise Search Architecture</h1>
+<div class="meta" style="display:flex;gap:16px;color:var(--muted);font-size:.9rem;margin-bottom:32px">
+  <span>OpenSearch</span><span>Java</span><span>Docker</span><span>Information Retrieval</span>
+</div>
+
+<section style="padding:40px 0">
+<h2>The problem</h2>
+<p>Large organizations typically store information across many different systems — Confluence, SharePoint, internal wikis, shared drives, and legacy databases. Each system has its own search. Employees need to know which system contains which information before they can search. There is no single entry point.</p>
+</section>
+
+<section style="padding:40px 0">
+<h2>Design approach</h2>
+<p>The architectural response is a federated search layer: a single query interface that searches across all repositories while respecting the access controls of each source system.</p>
+
+<h3 style="margin-top:24px">Connectors</h3>
+<p>Each source system gets a dedicated connector. The connector authenticates, extracts documents, normalizes metadata, and maps access control lists. Connectors run independently on their own schedules — a Confluence connector might index every 5 minutes, while a legacy database connector might run daily.</p>
+
+<h3 style="margin-top:24px">Search core</h3>
+<p>OpenSearch provides the search infrastructure. Documents are indexed with full-text fields (BM25) and optionally with vector embeddings for semantic search. Relevance tuning accounts for document type — a technical specification should rank differently than a meeting note for the same query.</p>
+
+<h3 style="margin-top:24px">Access control</h3>
+<p>Document-level permissions are indexed alongside the content. At query time, the user's identity is resolved (via LDAP or SSO), and permission filters are applied to the search. This means a search for "project budget" returns different results for a project manager than for an intern — without the search system needing to understand organizational structure.</p>
+</section>
+
+<section style="padding:40px 0">
+<h2>Why incremental indexing matters</h2>
+<p>Full re-indexing is expensive and creates gaps. The connector approach uses incremental indexing — only documents changed since the last run are processed. This keeps the search index within minutes of the source system without creating load spikes. Zero-downtime reindexing is achieved by writing to a new index, then atomically swapping the alias when complete.</p>
+</section>
+
+<section style="padding:40px 0">
+<h2>Observations</h2>
+<p>The hardest part is not the search technology — it is the organizational complexity. Different teams have different expectations about what "search" means. Some want a Google-like single box. Others need faceted navigation with department and document-type filters. A good architecture accommodates both without adding complexity to the search core.</p>
+<p>The connector framework tends to become valuable beyond search — once you have a reliable pipeline that extracts and normalizes content from all internal systems, other use cases emerge: compliance auditing, automated reporting, knowledge graph construction.</p>
+</section>
+
+<p style="margin-top:60px"><a href="../index.html#notes" style="color:var(--accent)">&larr; Back to Engineering Notes</a></p>
+</article>
+</div></main>
+
+<footer><div class="wrap"><span>Ralph Brandao Vidal &mdash; Berlin</span></div></footer>
+</body></html>

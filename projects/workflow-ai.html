@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Satellite Image Classification — Ralph Brandao Vidal</title>
+<meta name="description" content="Transfer learning with DL4J — classifying satellite images using a pre-trained VGG16 model.">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head><body>
+
+<nav aria-label="Main navigation"><div class="wrap">
+  <a href="../" class="logo">Ralph Vidal</a>
+  <div class="nav-links"><a href="../index.html#notes">&larr; Engineering Notes</a></div>
+</div></nav>
+
+<main style="padding-top:120px"><div class="wrap">
+<article style="max-width:780px;margin:0 auto">
+
+<p class="eyebrow">Engineering Notes</p>
+<h1 style="margin-bottom:.5em">Satellite Image Classification with Transfer Learning</h1>
+<div class="meta" style="display:flex;gap:16px;color:var(--muted);font-size:.9rem;margin-bottom:32px">
+  <span>DL4J</span><span>Transfer Learning</span><span>VGG16</span><span>Computer Vision</span>
+</div>
+
+<section style="padding:40px 0">
+<h2>What this is</h2>
+<p>A project exploring transfer learning with the DL4J (Deep Learning for Java) library. It classifies satellite images from the UC Merced Land Use dataset into 21 categories — agricultural, airplane, beach, forest, harbor, and so on.</p>
+<p>The code is available at <a href="https://gitlab.com/rb2000/satellite-images-classification" target="_blank" rel="noopener">gitlab.com/rb2000/satellite-images-classification</a>.</p>
+</section>
+
+<section style="padding:40px 0">
+<h2>Approach</h2>
+<p>Training a deep convolutional network from scratch requires large datasets and significant computation. Transfer learning offers a practical alternative: start with a model pre-trained on ImageNet (VGG16, in this case), freeze its lower layers, and replace only the final classification layer with one that outputs 21 classes instead of 1,000.</p>
+<p>The pre-trained layers have already learned general visual features — edges, textures, shapes — that transfer well to satellite imagery. Only the classification head needs to learn the new categories. This reduces training time substantially.</p>
+</section>
+
+<section style="padding:40px 0">
+<h2>Implementation</h2>
+<p>Built with DL4J. The UC Merced dataset (2,100 images across 21 categories, 256x256 pixels each) is split 80/20 into training and test sets. The VGG16 model (~500 MB) is downloaded automatically on first run. Training runs for 30 epochs with batch size 10.</p>
+<p>The pre-trained model is loaded as a ComputationGraph. The <code>TransferLearning.GraphBuilder</code> API removes the original output layer and adds a new <code>OutputLayer</code> with 21 outputs and softmax activation.</p>
+</section>
+
+<section style="padding:40px 0">
+<h2>Results</h2>
+<p>After 30 epochs, the model achieves 91% accuracy on the test set. Some categories are harder than others — buildings and dense residential areas are occasionally confused, which makes sense given their visual similarity. Categories with distinctive patterns (forest, beach, airplane) classify near perfectly.</p>
+</section>
+
+<p style="margin-top:60px"><a href="../index.html#notes" style="color:var(--accent)">&larr; Back to Engineering Notes</a></p>
+</article>
+</div></main>
+
+<footer><div class="wrap"><span>Ralph Brandao Vidal &mdash; Berlin</span></div></footer>
+</body></html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Geospatial Search — Ralph Brandao Vidal</title>
+<meta name="description" content="PostGIS and Spring Boot — proximity-based search with Hibernate Spatial.">
+<link rel="stylesheet" href="../assets/css/main.css">
+</head><body>
+
+<nav aria-label="Main navigation"><div class="wrap">
+  <a href="../" class="logo">Ralph Vidal</a>
+  <div class="nav-links"><a href="../index.html#notes">&larr; Engineering Notes</a></div>
+</div></nav>
+
+<main style="padding-top:120px"><div class="wrap">
+<article style="max-width:780px;margin:0 auto">
+
+<p class="eyebrow">Engineering Notes</p>
+<h1 style="margin-bottom:.5em">PostGIS with Spring Boot</h1>
+<div class="meta" style="display:flex;gap:16px;color:var(--muted);font-size:.9rem;margin-bottom:32px">
+  <span>Spring Boot</span><span>PostGIS</span><span>Hibernate Spatial</span><span>Docker</span>
+</div>
+
+<section style="padding:40px 0">
+<h2>What this is</h2>
+<p>A sample project showing how to use PostGIS spatial extensions with Spring Boot and Hibernate Spatial. It came out of a real need during a client project: how to find all database entities within a given radius of a geographic coordinate.</p>
+<p>The code is available at <a href="https://gitlab.com/rb2000/postgis-sample" target="_blank" rel="noopener">gitlab.com/rb2000/postgis-sample</a>.</p>
+</section>
+
+<section style="padding:40px 0">
+<h2>Approach</h2>
+<p>The project models entities with latitude/longitude fields, then derives a PostGIS <code>Point</code> geometry column from those values. Hibernate Spatial handles the object-relational mapping between Java geometry types and PostGIS columns.</p>
+<p>Queries use PostGIS spatial functions — <code>WITHIN</code> to find points inside a circle, <code>DISTANCE</code> to measure between points. These are exposed through JPQL repository methods. The circle itself is constructed programmatically using a radius-in-meters parameter, converted to the coordinate reference system's units.</p>
+</section>
+
+<section style="padding:40px 0">
+<h2>Stack</h2>
+<p>Java 8, Spring Boot 2.5, Hibernate Spatial 5.4, PostGIS (via the postgis/postgis Docker image). REST endpoints are documented with OpenAPI/Swagger.</p>
+</section>
+
+<section style="padding:40px 0">
+<h2>Key learning</h2>
+<p>The coordinate unit conversion turned out to be the most interesting part. PostGIS works in the units of the spatial reference system (degrees for SRID 4326), but users think in meters. The distance factor (~100,000 for degrees-to-meters at mid-latitudes) needs to be applied when constructing the search circle. Getting this right was essential for meaningful proximity queries.</p>
+</section>
+
+<p style="margin-top:60px"><a href="../index.html#notes" style="color:var(--accent)">&larr; Back to Engineering Notes</a></p>
+</article>
+</div></main>
+
+<footer><div class="wrap"><span>Ralph Brandao Vidal &mdash; Berlin</span></div></footer>
+</body></html>
