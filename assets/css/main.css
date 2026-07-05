@@ -73,16 +73,22 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center;height:6
 
 /* ── Hero ────────────────────────────────── */
 .hero{
-  min-height:100vh;display:flex;align-items:center;
-  background:var(--bg);
+  min-height:85vh;display:flex;align-items:center;
+  background-color:var(--bg);
   background-image:
-    radial-gradient(ellipse at 70% 30%, rgba(59,130,246,.06) 0%, transparent 60%),
-    radial-gradient(ellipse at 30% 70%, rgba(99,102,241,.04) 0%, transparent 60%);
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('../img/hero/cropped-fraz3.png');
+  background-size:cover;
+  background-position:center;
 }
-.hero-inner{padding-top:64px;max-width:720px}
-.hero-inner h1{margin-bottom:0.35em;font-weight:700;letter-spacing:-0.03em}
+.hero .wrap{max-width:1400px}
+.hero-inner{padding:96px 0;max-width:780px}
+.hero-inner h1{
+  margin-bottom:0.25em;font-weight:700;letter-spacing:-0.04em;
+  font-size:clamp(2.8rem,6.5vw,5.2rem);line-height:1.08;
+}
 .hero-inner .accent{color:var(--accent)}
-.hero .lead{font-size:clamp(1.05rem,1.8vw,1.25rem);margin-bottom:36px;color:var(--text2);max-width:58ch}
+.hero .lead{font-size:clamp(1.05rem,1.8vw,1.25rem);margin-bottom:36px;color:var(--text2);max-width:56ch}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
 .btn{
   display:inline-flex;align-items:center;gap:8px;
@@ -290,9 +296,11 @@ footer{
 @media(max-width:768px){
   .nav-links{display:none}
   section{padding:56px 0}
-  .hero-inner h1{font-size:2.2rem}
+  .hero{min-height:70vh}
+  .hero-inner h1{font-size:2.8rem}
 }
 @media(max-width:480px){
-  .hero-inner h1{font-size:1.8rem}
+  .hero{min-height:65vh}
+  .hero-inner h1{font-size:2.2rem}
   .cap-grid,.services-grid,.contact-grid{grid-template-columns:1fr}
 }
